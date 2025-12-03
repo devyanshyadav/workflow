@@ -331,6 +331,9 @@ jobs:
       - name: Run Initial Build
         run: pnpm turbo run build --filter='!./workbench/*'
 
+      - name: Resolve symlinks
+        run: ./scripts/resolve-symlinks.sh workbench/${{ matrix.app.name }}
+
       - name: Run Build Tests
         run: pnpm vitest run packages/core/e2e/local-build.test.ts
         env:
@@ -412,6 +415,9 @@ jobs:
 
       - name: Setup PostgreSQL Database
         run: ./packages/world-postgres/bin/setup.js
+      
+      - name: Resolve symlinks
+        run: ./scripts/resolve-symlinks.sh workbench/${{ matrix.app.name }}
 
       - name: Run Build Tests
         run: pnpm vitest run packages/core/e2e/local-build.test.ts

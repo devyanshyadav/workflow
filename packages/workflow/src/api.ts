@@ -1,6 +1,7 @@
 export {
   type Event,
   getHookByToken,
+  getWorld,
   getRun,
   Run,
   resumeHook,
@@ -10,4 +11,5 @@ export {
   start,
   type WorkflowReadableStreamOptions,
   type WorkflowRun,
+  type World,
 } from '@workflow/core/runtime';

@@ -88,7 +88,7 @@ export async function register() {
   if (process.env.NEXT_RUNTIME !== "edge") {
     // Dynamic import to avoid edge runtime bundling issues
     console.log("Starting Postgres World...");
-    const { getWorld } = await import("workflow/runtime");
+    const { getWorld } = await import("workflow/api");
     await getWorld().start?.();
     console.log("Postgres World started");
   }
@@ -109,7 +109,7 @@ import type { ServerInit } from "@sveltejs/kit";
 export const init: ServerInit = async () => {
   if (process.env.WORKFLOW_TARGET_WORLD === "@workflow/world-postgres") {
     // Dynamic import to avoid edge runtime bundling issues
-    const { getWorld } = await import("workflow/runtime");
+    const { getWorld } = await import("workflow/api");
     console.log("Starting Postgres World...");
     await getWorld().start?.();
     console.log("Postgres World started");
@@ -132,7 +132,7 @@ export default defineNitroPlugin(async () => {
   if (process.env.WORKFLOW_TARGET_WORLD === "@workflow/world-postgres") {
     // Dynamic import to avoid edge runtime bundling issues
     console.log("Starting Postgres World...");
-    const { getWorld } = await import("workflow/runtime");
+    const { getWorld } = await import("workflow/api");
     await getWorld().start?.();
     console.log("Postgres World started");
   }

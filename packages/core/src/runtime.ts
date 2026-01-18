@@ -37,7 +37,7 @@ import {
 } from './util.js';
 import { runWorkflow } from './workflow.js';
 
-export type { Event, WorkflowRun };
+export type { Event, WorkflowRun, World };
 export { WorkflowSuspension } from './global.js';
 export {
   type HealthCheckEndpoint,
@@ -435,4 +435,4 @@ export function workflowEntrypoint(
 
 // this is a no-op placeholder as the client is
 // expecting this to be present but we aren't actually using it
-export function runStep() {}
+export function runStep() { }

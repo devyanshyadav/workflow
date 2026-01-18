@@ -3,6 +3,7 @@ export type {
   StartOptions,
   WorkflowReadableStreamOptions,
   WorkflowRun,
+  World,
 } from '@workflow/core/runtime';
 
 const workflowStub = (item: string) => {
@@ -17,6 +18,7 @@ export class Run {
   }
 }
 export const getRun = () => workflowStub('getRun');
+export const getWorld = () => workflowStub('getWorld');
 export const getHookByToken = () => workflowStub('getHookByToken');
 export const resumeHook = () => workflowStub('resumeHook');
 export const resumeWebhook = () => workflowStub('resumeWebhook');

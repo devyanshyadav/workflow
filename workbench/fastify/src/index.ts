@@ -7,7 +7,7 @@ import {
   WorkflowRunNotCompletedError,
 } from 'workflow/internal/errors';
 import { hydrateWorkflowArguments } from 'workflow/internal/serialization';
-import { getWorld, healthCheck } from 'workflow/runtime';
+import { getWorld, healthCheck } from 'workflow/api';
 import { allWorkflows } from '../_workflows.js';
 
 type JsonResult = { ok: true; value: any } | { ok: false; error: Error };

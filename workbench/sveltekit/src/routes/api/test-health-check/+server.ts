@@ -1,7 +1,7 @@
 // This route tests the queue-based health check functionality
 
 import type { RequestHandler } from '@sveltejs/kit';
-import { getWorld, healthCheck } from 'workflow/runtime';
+import { getWorld, healthCheck } from 'workflow/api';
 
 export const POST: RequestHandler = async ({ request }) => {
   try {

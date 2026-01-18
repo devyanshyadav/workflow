@@ -303,7 +303,7 @@ export abstract class BaseBuilder {
     // User steps
     ${imports}
     // API entrypoint
-    export { stepEntrypoint as POST } from 'workflow/runtime';`;
+    export { stepEntrypoint as POST } from 'workflow/api';`;
 
     // Bundle with esbuild and our custom SWC plugin
     const esbuildCtx = await esbuild.context({
@@ -531,7 +531,7 @@ export abstract class BaseBuilder {
 
       const workflowFunctionCode = `// biome-ignore-all lint: generated file
 /* eslint-disable */
-import { workflowEntrypoint } from 'workflow/runtime';
+import { workflowEntrypoint } from 'workflow/api';
 
 const workflowCode = \`${workflowBundleCode.replace(/[\\`$]/g, '\\$&')}\`;
 

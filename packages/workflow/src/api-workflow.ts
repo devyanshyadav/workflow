@@ -24,3 +24,9 @@ export const resumeHook = () => workflowStub('resumeHook');
 export const resumeWebhook = () => workflowStub('resumeWebhook');
 export const runStep = () => workflowStub('runStep');
 export const start = () => workflowStub('start');
+export const healthCheck = () => workflowStub('healthCheck');
+export type {
+  HealthCheckEndpoint,
+  HealthCheckOptions,
+  HealthCheckResult,
+} from '@workflow/core/runtime';

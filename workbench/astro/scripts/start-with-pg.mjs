@@ -7,7 +7,7 @@
 async function main() {
   if (process.env.WORKFLOW_TARGET_WORLD === '@workflow/world-postgres') {
     console.log('Starting Postgres World...');
-    const { getWorld } = await import('workflow/runtime');
+    const { getWorld } = await import('workflow/api');
     await getWorld().start?.();
   }
 

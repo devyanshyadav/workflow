@@ -12,4 +12,8 @@ export {
   type WorkflowReadableStreamOptions,
   type WorkflowRun,
   type World,
+  healthCheck,
+  type HealthCheckEndpoint,
+  type HealthCheckOptions,
+  type HealthCheckResult,
 } from '@workflow/core/runtime';

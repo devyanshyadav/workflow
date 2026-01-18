@@ -1,7 +1,7 @@
 // This route tests the queue-based health check functionality
 
 import { defineEventHandler, readRawBody } from 'h3';
-import { getWorld, healthCheck } from 'workflow/runtime';
+import { getWorld, healthCheck } from 'workflow/api';
 
 export default defineEventHandler(async (event) => {
   try {

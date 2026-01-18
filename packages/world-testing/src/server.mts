@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import { serve } from '@hono/node-server';
 import { Hono } from 'hono';
 import { getHookByToken, getRun, resumeHook, start } from 'workflow/api';
-import { getWorld } from 'workflow/runtime';
+import { getWorld } from 'workflow/api';
 import * as z from 'zod';
 import flow from '../.well-known/workflow/v1/flow.js';
 import manifest from '../.well-known/workflow/v1/manifest.json' with {

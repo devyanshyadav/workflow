@@ -1,6 +1,6 @@
 // This route tests the queue-based health check functionality
 
-import { getWorld, healthCheck } from 'workflow/runtime';
+import { getWorld, healthCheck } from 'workflow/api';
 
 export default async ({ req }: { req: Request }) => {
   try {
